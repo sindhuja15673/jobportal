@@ -1,0 +1,144 @@
+body{
+    background-color: white;
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    font-family: sans-serif;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    height: 70px;
+    
+    border-radius: 50px;
+  }
+  .navbar .logo{
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    font-size: 16px;
+    margin-right: 100px;
+  }
+  .nav-links li{
+    margin-top: -50px;
+  }
+  
+  .create {
+    background: linear-gradient(135deg, #c084fc, #6b21a8); 
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 300px;
+    margin-top: 15px;
+
+  }
+  
+.filters {
+  /* width: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    margin-top: 20px;
+    flex-wrap: wrap;
+    box-shadow: none;
+  }
+  
+  /* .search-input,
+  .location-select,
+  .job-type-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-width: 200px;
+  }
+  
+  .salary-slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .salary-slider input {
+    width: 150px;
+  } */
+  
+
+  @media (max-width: 480px) {
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: auto;
+      margin: 10px auto;
+      padding: 15px 20px;
+      border-radius: 20px;
+      position: relative;
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  
+    .nav-links li {
+      margin: 0;
+    }
+  
+    .create-job-btn {
+      position: static;
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+  
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 15px;
+      margin-top: 15px;
+      padding: 0 10px;
+    }
+  
+    .search-input,
+    .location-select,
+    .job-type-select {
+      width: 100%;
+      min-width: unset;
+    }
+  
+    .salary-slider {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .salary-slider input {
+      width: 100%;
+    }
+  }
+  
