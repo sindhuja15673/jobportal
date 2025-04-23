@@ -71,7 +71,7 @@ button.publish {
   cursor: pointer;
 }
 
-/*  */
+
 .job-listings-container {
   padding: 2rem;
   font-family: 'Segoe UI', sans-serif;
@@ -94,8 +94,8 @@ button.publish {
   margin-bottom: 6px;
   font-size: 1rem;
   font-weight: 500;
-  color: #555; /* Match other label colors */
-  padding: 0 8px; /* Add horizontal padding */
+  color: #555; 
+  padding: 0 8px; 
 }
 
 
@@ -150,7 +150,8 @@ button.publish {
 }
 
 .job-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
+  border: 1px solid #3fb7fc;
 }
 
 .job-header {

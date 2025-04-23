@@ -38,10 +38,7 @@ const JobListing = ({ filters }) => {
     const searchMatch = search
       ? job.jobTitle.toLowerCase().includes(search.toLowerCase())
       : true;
-
-    // const locationMatch = location
-    //   ? job.location.toLowerCase() === location.toLowerCase()
-    //   : true;
+      
       const locationMatch = location
       ? job.location.toLowerCase().includes(location.toLowerCase().trim())
       : true;
@@ -61,18 +58,6 @@ const salaryMatch = salary
     averageSalary >= salary[0] &&
     averageSalary <= salary[1]
   : true;
-
-
-    // const salaryNumbers = job.salaryRange?.match(/\d+/g)?.map(Number);
-    // const averageSalary = salaryNumbers
-    //   ? salaryNumbers.reduce((a, b) => a + b, 0) / salaryNumbers.length
-    //   : null;
-
-    // const salaryMatch = salary
-    //   ? averageSalary !== null &&
-    //     averageSalary >= salary[0] &&
-    //     averageSalary <= salary[1]
-    //   : true;
 
     return searchMatch && locationMatch && jobTypeMatch && salaryMatch;
   });
