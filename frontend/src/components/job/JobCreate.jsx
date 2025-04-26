@@ -199,7 +199,7 @@ const CreateJob = ({ onClose, refreshJobs }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/jobs', {
+      const response = await axios.post('https://jobportal-qzyk.onrender.com/api/jobs', {
         ...formData,
         description: formData.description.split('\n').filter(Boolean), 
       });
