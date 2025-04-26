@@ -1,21 +1,32 @@
 const express = require('express');
-const Job = require('../models/Job.js');
-
+const Job = require('../models/Job');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-  const { jobTitle, companyName, companyLogo, location, salaryRange, jobType, description, applicationDeadline, applyLink } = req.body;
+  const {
+    jobTitle,
+    companyName,
+    companyLogo,
+    location,
+    salaryRange,
+    jobType,
+    experience,
+    description,
+    applicationDeadline,
+    applyLink,
+  } = req.body;
 
   const newJob = new Job({
     jobTitle,
     companyName,
-    companyLogo, 
+    companyLogo,
     location,
     salaryRange,
     jobType,
+    experience,
     description,
     applicationDeadline,
-    applyLink 
+    applyLink,
   });
 
   try {
@@ -26,10 +37,10 @@ router.post('/', async (req, res) => {
   }
 });
 
-
+// GET jobs
 router.get('/', async (req, res) => {
   try {
-    const jobs = await Job.find();
+    const jobs = await Job.find().sort({ createdAt: -1 });
     res.status(200).json(jobs);
   } catch (err) {
     res.status(500).json({ message: err.message });
